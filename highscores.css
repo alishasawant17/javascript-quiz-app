@@ -1,0 +1,131 @@
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.high-score {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--surface) 0%, #f8fafc 100%);
+  padding: 2rem 3rem;
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.high-score:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-lg);
+  border-left-width: 6px;
+}
+
+.high-score:nth-child(1) {
+  border-left-color: #fbbf24;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.high-score:nth-child(1)::before {
+  content: '🥇';
+  margin-right: 1rem;
+  font-size: 2.8rem;
+}
+
+.high-score:nth-child(2) {
+  border-left-color: #94a3b8;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.high-score:nth-child(2)::before {
+  content: '🥈';
+  margin-right: 1rem;
+  font-size: 2.8rem;
+}
+
+.high-score:nth-child(3) {
+  border-left-color: #fb923c;
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+}
+
+.high-score:nth-child(3)::before {
+  content: '🥉';
+  margin-right: 1rem;
+  font-size: 2.8rem;
+}
+
+#finalScore {
+  font-size: 3.6rem;
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#end {
+  background: var(--surface);
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-lg);
+  max-width: 50rem;
+}
+
+#end form {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+#end input {
+  margin-bottom: 1.5rem;
+}
+
+/* Clear scores button styling */
+.btn-danger {
+  background: linear-gradient(135deg, var(--error) 0%, #dc2626 100%);
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: auto;
+  min-width: 20rem;
+}
+
+.btn-danger:hover {
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* High scores container */
+#highScores {
+  background: var(--surface);
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .high-score {
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  #finalScore {
+    font-size: 3rem;
+  }
+
+  #end {
+    padding: 3rem 2rem;
+  }
+
+  #end form {
+    padding: 1.5rem;
+  }
+}
